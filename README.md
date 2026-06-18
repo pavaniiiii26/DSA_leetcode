@@ -25,5 +25,4 @@ I am actively solving problems across a wide variety of topics, including:
 - **Primary Language:** C / C++ 💻
 - **Platform:** [LeetCode](https://leetcode.com/)
 
-<img src="https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white"/> <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white"/> <img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=white"/>
 foundation I'm building for technical interviews and real-world engineering.
