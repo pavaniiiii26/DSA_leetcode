@@ -1,0 +1,22 @@
+int* targetIndices(int* nums, int numsSize, int target, int* returnSize) {
+
+    int less = 0;
+    int equal = 0;
+
+    for (int i = 0; i < numsSize; i++) {
+        if (nums[i] < target)
+            less++;
+        else if (nums[i] == target)
+            equal++;
+    }
+
+    *returnSize = equal;
+
+    int *ans = (int *)malloc(equal * sizeof(int));
+
+    for (int i = 0; i < equal; i++) {
+        ans[i] = less + i;
+    }
+
+    return ans;
+}
