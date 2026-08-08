@@ -1,23 +1,26 @@
-//method one
+//method two
+
+//reversing function
+void reverse(int nums[], int start, int end) {
+    while (start < end) {
+        int temp = nums[start];
+        nums[start] = nums[end];
+        nums[end] = temp;
+
+        start++;
+        end--;
+    }
+}
+
 void rotate(int* nums, int numsSize, int k) {
     k = k % numsSize;
-    
-    if (k == 0)
-    return;
 
-    int temp[k];
-    // Copy last k elements
-    for (int i = 0; i < k; i++) {
-        temp[i] = nums[numsSize - k + i];
-    }
+    // Reverse entire array
+    reverse(nums, 0, numsSize - 1);
 
-    // Shift remaining elements to the right
-    for (int i = numsSize - k - 1; i >= 0; i--) {
-        nums[i + k] = nums[i];
-    }
+    // Reverse first k elements
+    reverse(nums, 0, k - 1);
 
-    // Put temp elements at the beginning
-    for (int i = 0; i < k; i++) {
-        nums[i] = temp[i];
-    }
+    // Reverse remaining elements
+    reverse(nums, k, numsSize - 1);
 }
